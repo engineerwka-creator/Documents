@@ -21,6 +21,23 @@ Listy (list) (zbiór wielu wartości, które można dowolnie rozszerzać lub zmn
 liczby = [1, 2, 3, 4]
 imiona = ["Ala", "Bartek", "Celina"]
 
+# LISTA - Lista to kolekcja elementów, które można zmieniać (dodawać, usuwać, modyfikować). Ma kolejność i może zawierać różne typy danych.
+
+owoce = ["jabłko", "banan", "gruszka"]
+
+# Dodawanie elementu
+owoce.append("truskawka")
+
+# Dostęp do elementu (indeksy od 0)
+print(owoce[0])   # jabłko
+
+# Zmiana elementu
+owoce[1] = "śliwka"
+
+print(owoce)
+
+#----------------------------------------------------------------------------------------------
+
 Krotki (tuple) - nie możemy ich modyfikować
 koordynaty = (108, 320)
 
@@ -30,8 +47,60 @@ osoba = {"imie": "Ola", "wiek": 25}
 Zbiory (set) - możemy dodawać lub wyjmować ze zbiorów, przy czym nie mogą się powtarzać obiekty.
 liczby = {1, 2, 3, 4}
 
-| Typ danych  | Składnia           | Kolejność                    | Zmiana wartości | Duplikaty                   | Przykład                           |
-| ----------- | ------------------ | ---------------------------- | --------------- | --------------------------- | ---------------------------------- |
+# KROTKA (TUPLE) - Krotka to lista, której nie można zmieniać — czyli jest niezmienna (immutable).
+# Dobrze nadaje się do przechowywania stałych danych.
+
+# Tworzenie krotki
+kolory = ("czerwony", "zielony", "niebieski")
+
+# Dostęp do elementu
+print(kolory[1])  # zielony
+
+# Próba zmiany spowoduje błąd:
+# kolory[0] = "biały" ❌ (nie można!)
+
+#-------------------------------------------------------------------------------------------------------------------------
+# SŁOWNIK (DICT) - Słownik to zbiór par: klucz → wartość. Używasz go, gdy chcesz szybko znaleźć wartość po nazwie (kluczu).
+
+# Tworzenie słownika
+osoba = {
+    "imię": "Amelka",
+    "wiek": 10,
+    "miasto": "Warszawa"
+}
+
+# Dostęp po kluczu
+print(osoba["imię"])   # Amelka
+
+# Dodawanie nowej pary
+osoba["ulubiony_kolor"] = "różowy"
+
+# Zmiana wartości
+osoba["wiek"] = 11
+
+print(osoba)
+
+#-------------------------------------------------------------------------------------------------------------------------
+
+# ZBIÓR(SET) - Zbiór to kolekcja unikalnych elementów — nie ma duplikatów i nie ma określonej kolejności.
+
+# Tworzenie zbioru
+liczby = {1, 2, 3, 3, 4, 4, 5}
+
+print(liczby)  # duplikaty zostaną usunięte
+
+# Dodawanie elementu
+liczby.add(6)
+
+# Usuwanie elementu
+liczby.remove(3)
+
+print(liczby)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+| Typ danych  | Składnia           | Kolejność                    | Zmiana wartości    | Duplikaty                    | Przykład                           |
+| ----------- | ------------------ | ---------------------------- | ------------------ | --------------------------- | ---------------------------------- |
 | **Lista**   | `[]`               | ✅ Tak                        | ✅ Tak           | ✅ Tak                       | `owoce = ["jabłko", "banan"]`      |
 | **Krotka**  | `()`               | ✅ Tak                        | ❌ Nie           | ✅ Tak                       | `kolory = ("czerwony", "zielony")` |
 | **Słownik** | `{klucz: wartość}` | ❌ (od Pythona 3.7 zachowana) | ✅ Tak           | ❌ Klucze muszą być unikalne | `osoba = {"imię": "Amelka"}`       |
@@ -39,9 +108,11 @@ liczby = {1, 2, 3, 4}
 
 #---------------------------------------------------------------------------------------
 
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Lista = [1, 1, 2, 2, 'Lara', 'Lara', 5, 'Mike', 'Mike', 7, '8', 9, 9, 8, 8]
+Krotka = (11, 11, 12, 12, 13, 'Kira', 'Kira', 16, 'Masza', 'Masza', 18, 19, 19, 18)
+Slownik = {'wiek': 1, 'Amelia': 11, 'zamieszkala': 'Wroclaw'}
+zbior = {1, 'karol', 2, 'Magda', 3}
 
-b = [11, 12, 13, 14, 15, 16,17, 18, 19]
 
 a.append('Jaga')                    #wstawia liczbę lub tekst na końcu listy
 a.insert(5, 99)      #wstawia w konkretnie wskazanym miejscu liczbę lub tekst
