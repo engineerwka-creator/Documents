@@ -1,0 +1,560 @@
+[
+  {
+    "name": "Test_Interlock_Line_Detection",
+    "description": "Test detekcji pętli Interlock (BMS) - sygnał wysokiego napięcia",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 1,
+    "inputs": {
+      "IN_ZRN_DIG_01": true,
+      "DIAG_IN_ZRN_DIG_01_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_BMS_InterlockLine_State": true
+    },
+    "description_pl": "Pętla Interlock włączona - stan wysoki"
+  },
+  {
+    "name": "Test_Emergency_Line_Detection",
+    "description": "Test detekcji pętli Emergency (BMS) - sygnał awaryjnego zatrzymania",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 2,
+    "inputs": {
+      "IN_ZRN_DIG_02": true,
+      "DIAG_IN_ZRN_DIG_02_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_BMS_EmergencyLine_State": true
+    },
+    "description_pl": "Pętla Emergency włączona - sygnał awaryjny aktywny"
+  },
+  {
+    "name": "Test_PlugIn_1_Contactor_Closed",
+    "description": "Test statusu styku PlugIn 1 (Kontakt Minus/Plus zamknięty)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 3,
+    "inputs": {
+      "IN_ZRN_DIG_03": true,
+      "DIAG_IN_ZRN_DIG_03_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_PlugIn_1_ContactorMinus_Plus_Closed": true
+    },
+    "description_pl": "Styk PlugIn 1 zamknięty (zasilanie dostępne)"
+  },
+  {
+    "name": "Test_PlugIn_2_Contactor_Closed",
+    "description": "Test statusu styku PlugIn 2 (Kontakt Minus/Plus zamknięty)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 4,
+    "inputs": {
+      "IN_ZRN_DIG_04": true,
+      "DIAG_IN_ZRN_DIG_04_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_PlugIn_2_ContactorMinus_Plus_Closed": true
+    },
+    "description_pl": "Styk PlugIn 2 zamknięty (alternatywne zasilanie)"
+  },
+  {
+    "name": "Test_WakeUp_Vehicle_Signal",
+    "description": "Test sygnału Wake-Up z pojazdu (napęd gotowy do pracy)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 5,
+    "inputs": {
+      "IN_ZRN_DIG_07": true,
+      "DIAG_IN_ZRN_DIG_07_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_System_WakeUp_Vehicle": true
+    },
+    "description_pl": "Pojazd gotów - sygnał wake-up aktywny"
+  },
+  {
+    "name": "Test_WakeUp_PlugIn_Signal",
+    "description": "Test sygnału Wake-Up z PlugIn (P2 na ZRN)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 7,
+    "inputs": {
+      "IN_ZRN_DIG_05": true,
+      "DIAG_IN_ZRN_DIG_05_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_System_WakeUp_PlugIn": true
+    },
+    "description_pl": "Instalacja ładowania (P2) wysyła sygnał gotowości"
+  },
+  {
+    "name": "Test_Fuse_AirCompressor_Signal",
+    "description": "Test sygnału bezpiecznika Sprężarki Powietrza",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 10,
+    "inputs": {
+      "IN_OUT_ZRN_03_DIG": true,
+      "DIAG_IN_OUT_ZRN_03_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_ContactorsBox_AirCompressor_FuseSignal": true
+    },
+    "description_pl": "Bezpiecznik sprężarki - obwód prawidłowy"
+  },
+  {
+    "name": "Test_Fuse_BTMS_Signal",
+    "description": "Test sygnału bezpiecznika BTMS (Battery Thermal Management System)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 11,
+    "inputs": {
+      "IN_OUT_ZRN_06_DIG": true,
+      "DIAG_IN_OUT_ZRN_06_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_ContactorsBox_BTMS_FuseSignal": true
+    },
+    "description_pl": "Bezpiecznik BTMS - obwód prawidłowy"
+  },
+  {
+    "name": "Test_Fuse_TractionMotorFan_Signal",
+    "description": "Test sygnału bezpiecznika Wentylator Silnika Trakcyjnego",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 12,
+    "inputs": {
+      "IN_OUT_ZRN_07_DIG": true,
+      "DIAG_IN_OUT_ZRN_07_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_ContactorsBox_TractionMotorFan_FuseSignal": true
+    },
+    "description_pl": "Bezpiecznik wentylátora - obwód prawidłowy"
+  },
+  {
+    "name": "Test_Fuse_AC1_Signal",
+    "description": "Test sygnału bezpiecznika Klimatyzacji Front AC1",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 13,
+    "inputs": {
+      "IN_OUT_ZRN_08_DIG": true,
+      "DIAG_IN_OUT_ZRN_08_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_ContactorsBox_AC1_FuseSignal": true
+    },
+    "description_pl": "Bezpiecznik klimy W1 - obwód prawidłowy"
+  },
+  {
+    "name": "Test_Fuse_AC2_Signal",
+    "description": "Test sygnału bezpiecznika Klimatyzacji Tył AC2",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 14,
+    "inputs": {
+      "IN_OUT_ZRN_09_DIG": true,
+      "DIAG_IN_OUT_ZRN_09_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_ContactorsBox_AC2_FuseSignal": true
+    },
+    "description_pl": "Bezpiecznik klimy W2 - obwód prawidłowy"
+  },
+  {
+    "name": "Test_Service_Mode_Enabled",
+    "description": "Test aktywacji trybu serwisowego (przycisk serwisowy)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 15,
+    "inputs": {
+      "IN_OUT_ZRN_04_DIG": true,
+      "DIAG_IN_OUT_ZRN_04_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_ZRN_Service_Mode_Enabled": true
+    },
+    "description_pl": "Tryb serwisowy aktywny - przycisk wciśnięty"
+  },
+  {
+    "name": "Test_Supply_Voltage_Conversion",
+    "description": "Test konwersji napięcia zasilania (UDINT -> UINT)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 17,
+    "inputs": {
+      "IN_ZRN_PWR": 48000
+    },
+    "expected_outputs": {
+      "G_MI_System_SupplyVoltage": 48000
+    },
+    "description_pl": "Napięcie zasilania 48V - konwersja do formatu UINT"
+  },
+  {
+    "name": "Test_TrBat_TotalChargeEnergy_R1",
+    "description": "Test transferu całkowitej energii ładowania baterii trakcyjnej (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 18,
+    "inputs": {
+      "G_NVM_Variables_TrBat_TotalCharge_Energy_R1": 125000
+    },
+    "expected_outputs": {
+      "G_MEI_TrBat_TotalChargeEnergy_DuringR1": 125000
+    },
+    "description_pl": "Energia ładowania R1: 125000 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_TrBat_TotalDischargeEnergy_R1",
+    "description": "Test transferu całkowitej energii rozładowania baterii (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 19,
+    "inputs": {
+      "G_NVM_Variables_TrBat_TotalDischarge_Energy_R1": 95000
+    },
+    "expected_outputs": {
+      "G_MEI_TrBat_TotalDischargeEnergy_DuringR1": 95000
+    },
+    "description_pl": "Energia rozładowania R1: 95000 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_TrBat_TotalRecuperatedEnergy_R1",
+    "description": "Test transferu całkowitej energii rekuperacji baterii (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 20,
+    "inputs": {
+      "G_NVM_Variables_TrBat_TotalRecuperatedEnergy_R1": 35000
+    },
+    "expected_outputs": {
+      "G_MEI_TrBat_TotalRecuperatedEnergy_DuringR1": 35000
+    },
+    "description_pl": "Energia rekuperacji R1: 35000 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_TotalVehicleDistance_R1",
+    "description": "Test transferu całkowitej przebytej odległości pojazdu (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 21,
+    "inputs": {
+      "G_NVM_Variables_TotalVehicleDistans_DuringR1": 45.75
+    },
+    "expected_outputs": {
+      "G_MEI_TotalVehicleDistance_DuringR1": 45.75
+    },
+    "description_pl": "Dystans R1: 45.75 km - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_AirCompressor_WorkingTime_R1",
+    "description": "Test transferu całkowitego czasu pracy sprężarki (Run 1) - hh:mm:ss",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "networks": [22, 23, 24],
+    "inputs": {
+      "G_NVM_Variables_AirCompr_TotalWorkingTime_hh": 120,
+      "G_NVM_Variables_AirCompr_TotalWorkingTime_mm": 45,
+      "G_NVM_Variables_AirCompr_TotalWorkingTime_ss": 30
+    },
+    "expected_outputs": {
+      "G_MEI_AirCompressor_TotalWorkingTime_hh": 120,
+      "G_MEI_AirCompressor_TotalWorkingTime_mm": 45,
+      "G_MEI_AirCompressor_TotalWorkingTime_ss": 30
+    },
+    "description_pl": "Czas pracy sprężarki R1: 120:45:30 - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_Propulsion_ReadyToGo_Time_R1",
+    "description": "Test transferu czasu gotowości systemu napędu (Run 1) - hh:mm:ss",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "networks": [25, 26, 27],
+    "inputs": {
+      "G_NVM_Variables_Prop_ReadyToGo_TotalTime_hh": 8,
+      "G_NVM_Variables_Prop_ReadyToGo_TotalTime_mm": 30,
+      "G_NVM_Variables_Prop_ReadyToGo_TotalTime_ss": 15
+    },
+    "expected_outputs": {
+      "G_MEI_Propulsion_ReadyToGo_TotalTime_hh": 8,
+      "G_MEI_Propulsion_ReadyToGo_TotalTime_mm": 30,
+      "G_MEI_Propulsion_ReadyToGo_TotalTime_ss": 15
+    },
+    "description_pl": "Czas gotowości napędu R1: 8:30:15 - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_System_KL15E_Time_R1",
+    "description": "Test transferu czasu zasilania KL15E (Run 1) - hh:mm:ss",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "networks": [28, 29, 30],
+    "inputs": {
+      "G_NVM_Variables_System_KL15E_TotalTime_hh": 240,
+      "G_NVM_Variables_System_KL15E_TotalTime_mm": 20,
+      "G_NVM_Variables_System_KL15E_TotalTime_ss": 45
+    },
+    "expected_outputs": {
+      "G_MEI_System_KL15E_TotalTime_hh": 240,
+      "G_MEI_System_KL15E_TotalTime_mm": 20,
+      "G_MEI_System_KL15E_TotalTime_ss": 45
+    },
+    "description_pl": "Czas KL15E R1: 240:20:45 - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_FuelCell_H2_Use_R1",
+    "description": "Test transferu całkowitego zużycia wodoru (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 31,
+    "inputs": {
+      "G_NVM_Variables_FuelCell_Total_H2_Use": 850
+    },
+    "expected_outputs": {
+      "G_MEI_FuelCell_Total_H2_Use": 850
+    },
+    "description_pl": "Zużycie H2: 850 litrów - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_FuelCell_H2_Use_During_R1",
+    "description": "Test transferu zużycia wodoru podczas Run 1 (REAL precision)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 32,
+    "inputs": {
+      "G_NVM_Variables_FuelCell_Total_H2_Use_DuringR1": 42.5
+    },
+    "expected_outputs": {
+      "G_MEI_FuelCell_Total_H2_Use_DuringR1": 42.5
+    },
+    "description_pl": "Zużycie H2 podczas R1: 42.5 L - zmienoprzecinkowa precyzja"
+  },
+  {
+    "name": "Test_FuelCell_H2_Use_Calculated",
+    "description": "Test transferu obliczonego zużycia wodoru",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 33,
+    "inputs": {
+      "G_NVM_Variables_H2_Use_Calculated": 38
+    },
+    "expected_outputs": {
+      "G_MEI_FuelCell_Total_H2_Use_Calculated": 38
+    },
+    "description_pl": "Obliczone zużycie H2: 38 L - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_AC_Front_Heating_Energy_R1",
+    "description": "Test transferu energii grzewczej klimy przedniej (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 34,
+    "inputs": {
+      "G_NVM_Variables_AC_FRONT_TotalHeatingEnergy": 15000
+    },
+    "expected_outputs": {
+      "G_MEI_A_C_FRONT_TotalHeatingEnergy": 15000
+    },
+    "description_pl": "Energia grzewcza W1: 15000 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_AC_Front_Cooling_Energy_R1",
+    "description": "Test transferu energii chłodzenia klimy przedniej (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 35,
+    "inputs": {
+      "G_NVM_Variables_AC_FRONT_TotalAirCondEnergy": 22000
+    },
+    "expected_outputs": {
+      "G_MEI_A_C_FRONT_TotalAirConditioningEnergy": 22000
+    },
+    "description_pl": "Energia chłodzenia W1: 22000 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_AC_Rear_Heating_Energy_R1",
+    "description": "Test transferu energii grzewczej klimy tylnej (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 36,
+    "inputs": {
+      "G_NVM_Variables_AC_REAR_TotalHeatingEnergy": 12500
+    },
+    "expected_outputs": {
+      "G_MEI_A_C_REAR_TotalHeatingEnergy": 12500
+    },
+    "description_pl": "Energia grzewcza W2: 12500 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_AC_Rear_Cooling_Energy_R1",
+    "description": "Test transferu energii chłodzenia klimy tylnej (Run 1)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 37,
+    "inputs": {
+      "G_NVM_Variables_AC_REAR_TotalAirCondEnergy": 18500
+    },
+    "expected_outputs": {
+      "G_MEI_A_C_REAR_TotalAirConditioningEnergy": 18500
+    },
+    "description_pl": "Energia chłodzenia W2: 18500 J - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_AirCompressor_LowDutyCycle",
+    "description": "Test transferu wskaźnika niskiego cyklu pracy sprężarki",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 38,
+    "inputs": {
+      "G_NVM_Variables_AirCompressorLowDutyCycle": 35
+    },
+    "expected_outputs": {
+      "G_MEI_AirCompressor_LowDutyCycle": 35
+    },
+    "description_pl": "Wskaźnik cyklu sprężarki: 35% - transfer z NVM do MEI"
+  },
+  {
+    "name": "Test_FuelCell_H2_Consumption_Memory",
+    "description": "Test transferu pamięci zużycia wodoru stogu paliwowego",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 39,
+    "inputs": {
+      "G_NVM_Variables_FuelCell_H2ConsumptionMemory": 5
+    },
+    "expected_outputs": {
+      "G_MEO_FuelCell_H2ConsumptionMemory": 5
+    },
+    "description_pl": "Pamięć zużycia H2: indeks 5 - transfer z NVM do MEO"
+  },
+  {
+    "name": "Test_Diagnostic_Error_Code_01",
+    "description": "Test diagnozy błędu na wejściu ZRN_DIG_01 - diagnoza prawidłowa",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 1,
+    "inputs": {
+      "IN_ZRN_DIG_01": true,
+      "DIAG_IN_ZRN_DIG_01_DIAG": 0
+    },
+    "expected_outputs": {
+      "DIAG_IN_ZRN_DIG_01_DIAG": 0
+    },
+    "description_pl": "Kod diagnostyki: 0x0000 (prawidłowo)"
+  },
+  {
+    "name": "Test_Diagnostic_Error_Code_02_Fault",
+    "description": "Test diagnozy błędu na wejściu ZRN_DIG_02 - zwarcie",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "network": 2,
+    "inputs": {
+      "IN_ZRN_DIG_02": false,
+      "DIAG_IN_ZRN_DIG_02_DIAG": 1
+    },
+    "expected_outputs": {
+      "DIAG_IN_ZRN_DIG_02_DIAG": 1
+    },
+    "description_pl": "Kod diagnostyki: 0x0001 (zwarcie obwodu)"
+  },
+  {
+    "name": "Test_All_Inputs_Normal_Operation",
+    "description": "Test wszystkich wejść cyfrowych w normalnym trybie pracy",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "inputs": {
+      "IN_ZRN_DIG_01": true,
+      "IN_ZRN_DIG_02": true,
+      "IN_ZRN_DIG_03": true,
+      "IN_ZRN_DIG_04": true,
+      "IN_ZRN_DIG_05": true,
+      "IN_ZRN_DIG_06": false,
+      "IN_ZRN_DIG_07": true,
+      "IN_ZRN_DIG_08": false,
+      "IN_OUT_ZRN_03_DIG": true,
+      "IN_OUT_ZRN_04_DIG": false,
+      "IN_OUT_ZRN_05_DIG": false,
+      "IN_OUT_ZRN_06_DIG": true,
+      "IN_OUT_ZRN_07_DIG": true,
+      "IN_OUT_ZRN_08_DIG": true,
+      "IN_OUT_ZRN_09_DIG": true,
+      "IN_ZRN_PWR": 48000,
+      "DIAG_IN_ZRN_DIG_01_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_02_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_03_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_04_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_05_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_06_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_07_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_08_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_03_DIG_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_04_DIG_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_05_DIG_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_06_DIG_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_07_DIG_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_08_DIG_DIAG": 0,
+      "DIAG_IN_OUT_ZRN_09_DIG_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_BMS_InterlockLine_State": true,
+      "G_MI_BMS_EmergencyLine_State": true,
+      "G_MI_PlugIn_1_ContactorMinus_Plus_Closed": true,
+      "G_MI_PlugIn_2_ContactorMinus_Plus_Closed": true,
+      "G_MI_System_WakeUp_Vehicle": true,
+      "G_MI_System_WakeUp_PlugIn": true,
+      "G_MI_ContactorsBox_AirCompressor_FuseSignal": true,
+      "G_MI_ContactorsBox_BTMS_FuseSignal": true,
+      "G_MI_ContactorsBox_TractionMotorFan_FuseSignal": true,
+      "G_MI_ContactorsBox_AC1_FuseSignal": true,
+      "G_MI_ContactorsBox_AC2_FuseSignal": true,
+      "G_MI_ZRN_Service_Mode_Enabled": false,
+      "G_MI_System_SupplyVoltage": 48000
+    },
+    "description_pl": "Test całego systemu - wszystkie wejścia w stanie prawidłowym"
+  },
+  {
+    "name": "Test_Emergency_Stop_Priority",
+    "description": "Test priorytetu Emergency Stop - powinien deaktywować inne sygnały",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "inputs": {
+      "IN_ZRN_DIG_02": true,
+      "IN_ZRN_DIG_01": true,
+      "IN_ZRN_DIG_03": true,
+      "IN_ZRN_DIG_04": true,
+      "IN_ZRN_DIG_05": true,
+      "IN_ZRN_DIG_07": true
+    },
+    "expected_outputs": {
+      "G_MI_BMS_EmergencyLine_State": true
+    },
+    "priority": "emergency_stop",
+    "description_pl": "Sygnał Emergency Stop ma najwyższy priorytet"
+  },
+  {
+    "name": "Test_Partial_System_Fault",
+    "description": "Test częściowego uszkodzenia systemu - niektóre wejścia niekompletne",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "inputs": {
+      "IN_ZRN_DIG_01": false,
+      "IN_ZRN_DIG_02": true,
+      "DIAG_IN_ZRN_DIG_01_DIAG": 0,
+      "DIAG_IN_ZRN_DIG_02_DIAG": 0
+    },
+    "expected_outputs": {
+      "G_MI_BMS_InterlockLine_State": false,
+      "G_MI_BMS_EmergencyLine_State": true
+    },
+    "description_pl": "Pętla Interlock nieaktywna, Emergency aktywna"
+  },
+  {
+    "name": "Test_MUX_Input_Multiplexing_1",
+    "description": "Test multipleksowania wejścia 1 - napięciowy sygnał wysoki",
+    "block": "MUXInputRead",
+    "inputs": {
+      "w_Diag": 0,
+      "bo_Input": true
+    },
+    "expected_outputs": {
+      "bo_VoltageSignal": true
+    },
+    "description_pl": "MUX 1: Sygnał napięciowy wysoki (true)"
+  },
+  {
+    "name": "Test_MUX_Input_Multiplexing_2",
+    "description": "Test multipleksowania wejścia 2 - sygnał uziemienia",
+    "block": "MUXInputRead",
+    "inputs": {
+      "w_Diag": 0,
+      "bo_Input": true
+    },
+    "expected_outputs": {
+      "bo_GroundSignal": false
+    },
+    "description_pl": "MUX 2: Sygnał uziemienia nieaktywny (false)"
+  },
+  {
+    "name": "Test_Energy_Conservation_R1",
+    "description": "Test spójności energii baterii (ładowanie - rozładowanie + rekuperacja = równowaga)",
+    "block": "P01_01_01_InputsRead_ZRN",
+    "inputs": {
+      "G_NVM_Variables_TrBat_TotalCharge_Energy_R1": 125000,
+      "G_NVM_Variables_TrBat_TotalDischarge_Energy_R1": 95000,
+      "G_NVM_Variables_TrBat_TotalRecuperatedEnergy_R1": 30000
+    },
+    "validation_rule": "(charge - discharge + recuperated) >= -5000",
+    "expected_outputs": {
+      "energy_balance": "valid"
+    },
+    "description_pl": "Bilans energetyczny baterii - konserwacja energii w R1"
+  }
+]
