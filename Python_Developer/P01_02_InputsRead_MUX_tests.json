@@ -1,0 +1,404 @@
+[
+  {
+    "name": "Test_MUX1_Digital_Input_01_Processing",
+    "description": "Sprawdzenie przetwarzania wejścia cyfrowego MUX1/DIG_01 z diagnostyką",
+    "inputs": {
+      "IN_MUX1_IN_DIG_01": "True",
+      "DIAG_MUX1_IN_DIG_01_DIAG": "0",
+      "IN_MUX1_Device_State": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PowerSteering_FluidLevelSensor_Signal": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_Digital_Input_03_Processing",
+    "description": "Sprawdzenie przetwarzania wejścia cyfrowego MUX1/DIG_03",
+    "inputs": {
+      "IN_MUX1_IN_DIG_03": "True",
+      "DIAG_MUX1_IN_DIG_03_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PantographStd_LimitSwitch_MoveIn_Signal": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_Analog_Input_PP1_Resistance",
+    "description": "Odczyt rezystancji PP1 z czujnika analogowego",
+    "inputs": {
+      "IN_MUX1_IN_ANA_01": "1024",
+      "DIAG_MUX1_IN_ANA_01_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PlugIn_PP1_Resistance_Signal": "1024"
+    }
+  },
+  {
+    "name": "Test_MUX1_Analog_Input_PP2_Resistance",
+    "description": "Odczyt rezystancji PP2 z czujnika analogowego",
+    "inputs": {
+      "IN_MUX1_IN_ANA_02": "2048",
+      "DIAG_MUX1_IN_ANA_02_DIAG": "0",
+      "G_SYS_Configuration_VehicleLenght_2Articulation": "False"
+    },
+    "expected_outputs": {
+      "G_MI_PlugIn_PP2_Resistance_Signal": "2048"
+    }
+  },
+  {
+    "name": "Test_MUX1_CoolantTemp_Signal",
+    "description": "Odczyt temperatury płynu chłodzącego silnika trakcyjnego",
+    "inputs": {
+      "IN_MUX1_IN_ANA_03": "3072",
+      "DIAG_MUX1_IN_ANA_03_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_TrMotor_AVE130_CoolantTemp_Signal": "3072"
+    }
+  },
+  {
+    "name": "Test_MUX2_Digital_Input_01_FuelCell_Alarm",
+    "description": "Sprawdzenie alarmu Gazex dla wodoru w komorze napełniania",
+    "inputs": {
+      "IN_MUX2_IN_DIG_01": "True",
+      "DIAG_MUX2_IN_DIG_01_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_Gazex_HardwareAlarmActive": "True",
+      "G_MX2_A15_Gazex_Alarm2_SensorH2FillingChamber": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_Digital_Input_02_Hydrogen_Air_Canal",
+    "description": "Sprawdzenie alarmu Gazex dla wodoru w kanale powietrznym",
+    "inputs": {
+      "IN_MUX2_IN_DIG_02": "True",
+      "DIAG_MUX2_IN_DIG_02_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_Gazex_Alarm2_SensorHydrogenAirCanal": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_Digital_Input_03_FuelCell_Proximity",
+    "description": "Sprawdzenie czujnika zbliżeniowego otwartego ogniwa paliwowego",
+    "inputs": {
+      "IN_MUX2_IN_DIG_03": "True",
+      "DIAG_MUX2_IN_DIG_03_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_Proximity_Switch_Open": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_Digital_Input_04_FuelCell_SSC",
+    "description": "Sprawdzenie stanu SSC (System Service Condition) ogniwa paliwowego",
+    "inputs": {
+      "IN_MUX2_IN_DIG_04": "True",
+      "DIAG_MUX2_IN_DIG_04_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_SSC_OUT": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_Digital_Input_05_FuelCell_Module_OK",
+    "description": "Sprawdzenie stanu modułu ogniwa paliwowego",
+    "inputs": {
+      "IN_MUX2_IN_DIG_05": "True",
+      "DIAG_MUX2_IN_DIG_05_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_Module_OK": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_Digital_Input_06_Emergency_Valves",
+    "description": "Sprawdzenie stanu zaworów awaryjnych ogniwa paliwowego",
+    "inputs": {
+      "IN_MUX2_IN_DIG_06": "True",
+      "DIAG_MUX2_IN_DIG_06_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_Emergency_ValvesOpening": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_Analog_Input_01_H2_Temperature_Sensor1",
+    "description": "Odczyt czujnika temperatury wodoru nr 1",
+    "inputs": {
+      "IN_MUX2_IN_ANA_01": "1500",
+      "DIAG_MUX2_IN_ANA_01_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_H2_Temperature_Sensor_1": "1500"
+    }
+  },
+  {
+    "name": "Test_MUX2_Analog_Input_02_H2_Temperature_Sensor2",
+    "description": "Odczyt czujnika temperatury wodoru nr 2",
+    "inputs": {
+      "IN_MUX2_IN_ANA_02": "1600",
+      "DIAG_MUX2_IN_ANA_02_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_H2_Temperature_Sensor_2": "1600"
+    }
+  },
+  {
+    "name": "Test_MUX2_Analog_Input_10_Coolant_Level",
+    "description": "Odczyt poziomu płynu chłodzącego",
+    "inputs": {
+      "IN_MUX2_IN_ANA_09": "2500",
+      "DIAG_MUX2_IN_ANA_09_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_CoolingSystem_CoolantLevel_Signal": "2500"
+    }
+  },
+  {
+    "name": "Test_MUX1_Device_State_Update",
+    "description": "Aktualizacja stanu urządzenia MUX1",
+    "inputs": {
+      "IN_MUX1_Device_State": "1"
+    },
+    "expected_outputs": {
+      "G_SYS_System_MUX1_DeviceState": "1"
+    }
+  },
+  {
+    "name": "Test_MUX2_Device_State_Update",
+    "description": "Aktualizacja stanu urządzenia MUX2",
+    "inputs": {
+      "IN_MUX2_Device_State": "2"
+    },
+    "expected_outputs": {
+      "G_SYS_System_MUX2_DeviceState": "2"
+    }
+  },
+  {
+    "name": "Test_MUX1_Multiple_Inputs_Simultaneous",
+    "description": "Jednoczesne przetwarzanie wielu wejść MUX1",
+    "inputs": {
+      "IN_MUX1_IN_DIG_01": "True",
+      "IN_MUX1_IN_DIG_03": "True",
+      "IN_MUX1_IN_ANA_01": "1024",
+      "DIAG_MUX1_IN_DIG_01_DIAG": "0",
+      "DIAG_MUX1_IN_DIG_03_DIAG": "0",
+      "DIAG_MUX1_IN_ANA_01_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PowerSteering_FluidLevelSensor_Signal": "True",
+      "G_MI_PantographStd_LimitSwitch_MoveIn_Signal": "True",
+      "G_MI_PlugIn_PP1_Resistance_Signal": "1024"
+    }
+  },
+  {
+    "name": "Test_MUX2_FuelCell_Multiple_Alarms",
+    "description": "Sprawdzenie wielu alarmów ogniwa paliwowego jednocześnie",
+    "inputs": {
+      "IN_MUX2_IN_DIG_03": "True",
+      "IN_MUX2_IN_DIG_04": "True",
+      "IN_MUX2_IN_DIG_05": "True",
+      "DIAG_MUX2_IN_DIG_03_DIAG": "0",
+      "DIAG_MUX2_IN_DIG_04_DIAG": "0",
+      "DIAG_MUX2_IN_DIG_05_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_Proximity_Switch_Open": "True",
+      "G_MI_FuelCell_SSC_OUT": "True",
+      "G_MI_FuelCell_Module_OK": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_Diagnostic_Error_Detection",
+    "description": "Sprawdzenie zaznaczenia błędu diagnostyki",
+    "inputs": {
+      "IN_MUX1_IN_DIG_01": "True",
+      "DIAG_MUX1_IN_DIG_01_DIAG": "1"
+    },
+    "expected_outputs": {
+      "DIAG_MUX1_IN_DIG_01_DIAG": "1"
+    }
+  },
+  {
+    "name": "Test_MUX2_UDS_Override_Enable",
+    "description": "Włączenie trybu testowania z obejściem wejść",
+    "inputs": {
+      "IN_MUX2_IN_DIG_01": "False",
+      "G_MX2_UDS_InputOverrideForTest": "True",
+      "G_MX2_A15_Gazex_Alarm2_SensorH2FillingChamber": "True"
+    },
+    "expected_outputs": {
+      "G_MI_Gazex_HardwareAlarmActive": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_Configuration_2Articulation_False",
+    "description": "Konfiguracja dla pojazdu pojedynczego z G_SYS_Configuration_VehicleLenght_2Articulation=False",
+    "inputs": {
+      "G_SYS_Configuration_VehicleLenght_2Articulation": "False",
+      "IN_MUX1_IN_DIG_05": "True",
+      "DIAG_MUX1_IN_DIG_05_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PantographStd_LimitSwitch_MoveOut_Signal": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_Configuration_VehicleType_H2",
+    "description": "Konfiguracja dla pojazdu z napędem wodorowym",
+    "inputs": {
+      "G_SYS_Configuration_VehicleType_nE18H2": "True",
+      "IN_MUX2_IN_DIG_17": "True",
+      "DIAG_MUX2_IN_DIG_17_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_Gazex_Alarm1_SensorHydrogenFillingChamber": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_CoolantLevel_MIN_Signal",
+    "description": "Niski poziom płynu chłodzącego - sygnał minimalny",
+    "inputs": {
+      "IN_MUX1_IN_DIG_06": "True",
+      "DIAG_MUX1_IN_DIG_06_DIAG": "0",
+      "G_SYS_Configuration_VehicleLenght_2Articulation": "False"
+    },
+    "expected_outputs": {
+      "G_MI_TrMotor_AVE130_CoolantLevelMIN_Signal": "True"
+    }
+  },
+  {
+    "name": "Test_MUX1_CoolantLevel_MAX_Signal",
+    "description": "Wysoki poziom płynu chłodzącego - sygnał maksymalny",
+    "inputs": {
+      "IN_MUX1_IN_DIG_07": "True",
+      "DIAG_MUX1_IN_DIG_07_DIAG": "0",
+      "G_SYS_Configuration_VehicleLenght_2Articulation": "False"
+    },
+    "expected_outputs": {
+      "G_MI_TrMotor_AVE130_CoolantLevelMAX_Signal": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_FuelCell_Cooling_Refilling_Button",
+    "description": "Naciśnięcie przycisku uzupełniania płynu chłodzącego ogniwa",
+    "inputs": {
+      "IN_MUX2_IN_DIG_07": "True",
+      "DIAG_MUX2_IN_DIG_07_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_CoolingRefillingButton_Pressed": "True"
+    }
+  },
+  {
+    "name": "Test_MUX2_FuelCell_Cooling_Levels_Hysteresis",
+    "description": "Histereza poziomu płynu chłodzącego ogniwa - trzy poziomy",
+    "inputs": {
+      "IN_MUX2_IN_DIG_08": "True",
+      "DIAG_MUX2_IN_DIG_08_DIAG": "0",
+      "IN_MUX2_IN_DIG_09": "False",
+      "DIAG_MUX2_IN_DIG_09_DIAG": "0",
+      "IN_MUX2_IN_DIG_10": "False",
+      "DIAG_MUX2_IN_DIG_10_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_CoolingLiquid_Min_Level": "True",
+      "G_MI_FuelCell_CoolingLiquid_Medium_Level": "False",
+      "G_MI_FuelCell_CoolingLiquid_Max_Level": "False"
+    }
+  },
+  {
+    "name": "Test_MUX3_Input_Processing",
+    "description": "Przetwarzanie wejść z multipleksera MUX3",
+    "inputs": {
+      "IN_MUX3_Device_State": "3",
+      "IN_MUX3_IN_DIG_05": "True",
+      "DIAG_MUX3_IN_DIG_05_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_SYS_System_MUX3_DeviceState": "3"
+    }
+  },
+  {
+    "name": "Test_MUX4_Input_Processing",
+    "description": "Przetwarzanie wejść z multipleksera MUX4",
+    "inputs": {
+      "IN_MUX4_Device_State": "4",
+      "IN_MUX4_IN_DIG_01": "True",
+      "DIAG_MUX4_IN_DIG_01_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_SYS_System_MUX4_DeviceState": "4"
+    }
+  },
+  {
+    "name": "Test_MUX1_All_Inputs_Disabled",
+    "description": "Wszystkie wejścia wyłączone - brak aktywnych sygnałów",
+    "inputs": {
+      "IN_MUX1_IN_DIG_01": "False",
+      "IN_MUX1_IN_DIG_02": "False",
+      "IN_MUX1_IN_DIG_03": "False",
+      "IN_MUX1_IN_DIG_04": "False",
+      "DIAG_MUX1_IN_DIG_01_DIAG": "0",
+      "DIAG_MUX1_IN_DIG_02_DIAG": "0",
+      "DIAG_MUX1_IN_DIG_03_DIAG": "0",
+      "DIAG_MUX1_IN_DIG_04_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PowerSteering_FluidLevelSensor_Signal": "False",
+      "G_MI_PantographStd_LimitSwitch_MoveIn_Signal": "False",
+      "G_MI_PantographStd_LimitSwitch_MoveOut_Signal": "False"
+    }
+  },
+  {
+    "name": "Test_MUX2_All_Temperature_Sensors",
+    "description": "Odczyt wszystkich czujników temperatury wodoru H2",
+    "inputs": {
+      "IN_MUX2_IN_ANA_01": "1500",
+      "IN_MUX2_IN_ANA_02": "1550",
+      "IN_MUX2_IN_ANA_03": "1600",
+      "IN_MUX2_IN_ANA_04": "1650",
+      "IN_MUX2_IN_ANA_05": "1700",
+      "DIAG_MUX2_IN_ANA_01_DIAG": "0",
+      "DIAG_MUX2_IN_ANA_02_DIAG": "0",
+      "DIAG_MUX2_IN_ANA_03_DIAG": "0",
+      "DIAG_MUX2_IN_ANA_04_DIAG": "0",
+      "DIAG_MUX2_IN_ANA_05_DIAG": "0",
+      "G_MX2_UDS_InputOverrideForTest": "False"
+    },
+    "expected_outputs": {
+      "G_MI_FuelCell_H2_Temperature_Sensor_1": "1500",
+      "G_MI_FuelCell_H2_Temperature_Sensor_2": "1550",
+      "G_MI_FuelCell_H2_Temperature_Sensor_3": "1600",
+      "G_MI_FuelCell_H2_Temperature_Sensor_4": "1650",
+      "G_MI_FuelCell_H2_Temperature_Sensor_5": "1700"
+    }
+  },
+  {
+    "name": "Test_MUX1_Proportional_Signal_Range",
+    "description": "Test zakresu sygnałów analogowych od 0 do maksimum",
+    "inputs": {
+      "IN_MUX1_IN_ANA_01": "0",
+      "IN_MUX1_IN_ANA_02": "4095",
+      "DIAG_MUX1_IN_ANA_01_DIAG": "0",
+      "DIAG_MUX1_IN_ANA_02_DIAG": "0"
+    },
+    "expected_outputs": {
+      "G_MI_PlugIn_PP1_Resistance_Signal": "0",
+      "G_MI_PlugIn_PP2_Resistance_Signal": "4095"
+    }
+  }
+]
