@@ -5,11 +5,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 1,
     "inputs": {
-      "IN_ZRN_DIG_01": true,
+      "IN_ZRN_DIG_01": "True",
       "DIAG_IN_ZRN_DIG_01_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_BMS_InterlockLine_State": true
+      "G_MI_BMS_InterlockLine_State": "True"
     },
     "description_pl": "Pętla Interlock włączona - stan wysoki"
   },
@@ -19,11 +19,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 2,
     "inputs": {
-      "IN_ZRN_DIG_02": true,
+      "IN_ZRN_DIG_02": "True",
       "DIAG_IN_ZRN_DIG_02_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_BMS_EmergencyLine_State": true
+      "G_MI_BMS_EmergencyLine_State": "True"
     },
     "description_pl": "Pętla Emergency włączona - sygnał awaryjny aktywny"
   },
@@ -33,11 +33,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 3,
     "inputs": {
-      "IN_ZRN_DIG_03": true,
+      "IN_ZRN_DIG_03": "True",
       "DIAG_IN_ZRN_DIG_03_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_PlugIn_1_ContactorMinus_Plus_Closed": true
+      "G_MI_PlugIn_1_ContactorMinus_Plus_Closed": "True"
     },
     "description_pl": "Styk PlugIn 1 zamknięty (zasilanie dostępne)"
   },
@@ -47,11 +47,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 4,
     "inputs": {
-      "IN_ZRN_DIG_04": true,
+      "IN_ZRN_DIG_04": "True",
       "DIAG_IN_ZRN_DIG_04_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_PlugIn_2_ContactorMinus_Plus_Closed": true
+      "G_MI_PlugIn_2_ContactorMinus_Plus_Closed": "True"
     },
     "description_pl": "Styk PlugIn 2 zamknięty (alternatywne zasilanie)"
   },
@@ -61,11 +61,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 5,
     "inputs": {
-      "IN_ZRN_DIG_07": true,
+      "IN_ZRN_DIG_07": "True",
       "DIAG_IN_ZRN_DIG_07_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_System_WakeUp_Vehicle": true
+      "G_MI_System_WakeUp_Vehicle": "True"
     },
     "description_pl": "Pojazd gotów - sygnał wake-up aktywny"
   },
@@ -75,11 +75,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 7,
     "inputs": {
-      "IN_ZRN_DIG_05": true,
+      "IN_ZRN_DIG_05": "True",
       "DIAG_IN_ZRN_DIG_05_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_System_WakeUp_PlugIn": true
+      "G_MI_System_WakeUp_PlugIn": "True"
     },
     "description_pl": "Instalacja ładowania (P2) wysyła sygnał gotowości"
   },
@@ -89,11 +89,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 10,
     "inputs": {
-      "IN_OUT_ZRN_03_DIG": true,
+      "IN_OUT_ZRN_03_DIG": "True",
       "DIAG_IN_OUT_ZRN_03_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_ContactorsBox_AirCompressor_FuseSignal": true
+      "G_MI_ContactorsBox_AirCompressor_FuseSignal": "True"
     },
     "description_pl": "Bezpiecznik sprężarki - obwód prawidłowy"
   },
@@ -103,11 +103,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 11,
     "inputs": {
-      "IN_OUT_ZRN_06_DIG": true,
+      "IN_OUT_ZRN_06_DIG": "True",
       "DIAG_IN_OUT_ZRN_06_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_ContactorsBox_BTMS_FuseSignal": true
+      "G_MI_ContactorsBox_BTMS_FuseSignal": "True"
     },
     "description_pl": "Bezpiecznik BTMS - obwód prawidłowy"
   },
@@ -117,11 +117,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 12,
     "inputs": {
-      "IN_OUT_ZRN_07_DIG": true,
+      "IN_OUT_ZRN_07_DIG": "True",
       "DIAG_IN_OUT_ZRN_07_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_ContactorsBox_TractionMotorFan_FuseSignal": true
+      "G_MI_ContactorsBox_TractionMotorFan_FuseSignal": "True"
     },
     "description_pl": "Bezpiecznik wentylátora - obwód prawidłowy"
   },
@@ -131,11 +131,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 13,
     "inputs": {
-      "IN_OUT_ZRN_08_DIG": true,
+      "IN_OUT_ZRN_08_DIG": "True",
       "DIAG_IN_OUT_ZRN_08_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_ContactorsBox_AC1_FuseSignal": true
+      "G_MI_ContactorsBox_AC1_FuseSignal": "True"
     },
     "description_pl": "Bezpiecznik klimy W1 - obwód prawidłowy"
   },
@@ -145,11 +145,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 14,
     "inputs": {
-      "IN_OUT_ZRN_09_DIG": true,
+      "IN_OUT_ZRN_09_DIG": "True",
       "DIAG_IN_OUT_ZRN_09_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_ContactorsBox_AC2_FuseSignal": true
+      "G_MI_ContactorsBox_AC2_FuseSignal": "True"
     },
     "description_pl": "Bezpiecznik klimy W2 - obwód prawidłowy"
   },
@@ -159,11 +159,11 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 15,
     "inputs": {
-      "IN_OUT_ZRN_04_DIG": true,
+      "IN_OUT_ZRN_04_DIG": "True",
       "DIAG_IN_OUT_ZRN_04_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_ZRN_Service_Mode_Enabled": true
+      "G_MI_ZRN_Service_Mode_Enabled": "True"
     },
     "description_pl": "Tryb serwisowy aktywny - przycisk wciśnięty"
   },
@@ -406,7 +406,7 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 1,
     "inputs": {
-      "IN_ZRN_DIG_01": true,
+      "IN_ZRN_DIG_01": "True",
       "DIAG_IN_ZRN_DIG_01_DIAG": 0
     },
     "expected_outputs": {
@@ -420,7 +420,7 @@
     "block": "P01_01_01_InputsRead_ZRN",
     "network": 2,
     "inputs": {
-      "IN_ZRN_DIG_02": false,
+      "IN_ZRN_DIG_02": "False",
       "DIAG_IN_ZRN_DIG_02_DIAG": 1
     },
     "expected_outputs": {
@@ -433,21 +433,21 @@
     "description": "Test wszystkich wejść cyfrowych w normalnym trybie pracy",
     "block": "P01_01_01_InputsRead_ZRN",
     "inputs": {
-      "IN_ZRN_DIG_01": true,
-      "IN_ZRN_DIG_02": true,
-      "IN_ZRN_DIG_03": true,
-      "IN_ZRN_DIG_04": true,
-      "IN_ZRN_DIG_05": true,
-      "IN_ZRN_DIG_06": false,
-      "IN_ZRN_DIG_07": true,
-      "IN_ZRN_DIG_08": false,
-      "IN_OUT_ZRN_03_DIG": true,
-      "IN_OUT_ZRN_04_DIG": false,
-      "IN_OUT_ZRN_05_DIG": false,
-      "IN_OUT_ZRN_06_DIG": true,
-      "IN_OUT_ZRN_07_DIG": true,
-      "IN_OUT_ZRN_08_DIG": true,
-      "IN_OUT_ZRN_09_DIG": true,
+      "IN_ZRN_DIG_01": "True",
+      "IN_ZRN_DIG_02": "True",
+      "IN_ZRN_DIG_03": "True",
+      "IN_ZRN_DIG_04": "True",
+      "IN_ZRN_DIG_05": "True",
+      "IN_ZRN_DIG_06": "False",
+      "IN_ZRN_DIG_07": "True",
+      "IN_ZRN_DIG_08": "False",
+      "IN_OUT_ZRN_03_DIG": "True",
+      "IN_OUT_ZRN_04_DIG": "False",
+      "IN_OUT_ZRN_05_DIG": "False",
+      "IN_OUT_ZRN_06_DIG": "True",
+      "IN_OUT_ZRN_07_DIG": "True",
+      "IN_OUT_ZRN_08_DIG": "True",
+      "IN_OUT_ZRN_09_DIG": "True",
       "IN_ZRN_PWR": 48000,
       "DIAG_IN_ZRN_DIG_01_DIAG": 0,
       "DIAG_IN_ZRN_DIG_02_DIAG": 0,
@@ -466,18 +466,18 @@
       "DIAG_IN_OUT_ZRN_09_DIG_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_BMS_InterlockLine_State": true,
-      "G_MI_BMS_EmergencyLine_State": true,
-      "G_MI_PlugIn_1_ContactorMinus_Plus_Closed": true,
-      "G_MI_PlugIn_2_ContactorMinus_Plus_Closed": true,
-      "G_MI_System_WakeUp_Vehicle": true,
-      "G_MI_System_WakeUp_PlugIn": true,
-      "G_MI_ContactorsBox_AirCompressor_FuseSignal": true,
-      "G_MI_ContactorsBox_BTMS_FuseSignal": true,
-      "G_MI_ContactorsBox_TractionMotorFan_FuseSignal": true,
-      "G_MI_ContactorsBox_AC1_FuseSignal": true,
-      "G_MI_ContactorsBox_AC2_FuseSignal": true,
-      "G_MI_ZRN_Service_Mode_Enabled": false,
+      "G_MI_BMS_InterlockLine_State": "True",
+      "G_MI_BMS_EmergencyLine_State": "True",
+      "G_MI_PlugIn_1_ContactorMinus_Plus_Closed": "True",
+      "G_MI_PlugIn_2_ContactorMinus_Plus_Closed": "True",
+      "G_MI_System_WakeUp_Vehicle": "True",
+      "G_MI_System_WakeUp_PlugIn": "True",
+      "G_MI_ContactorsBox_AirCompressor_FuseSignal": "True",
+      "G_MI_ContactorsBox_BTMS_FuseSignal": "True",
+      "G_MI_ContactorsBox_TractionMotorFan_FuseSignal": "True",
+      "G_MI_ContactorsBox_AC1_FuseSignal": "True",
+      "G_MI_ContactorsBox_AC2_FuseSignal": "True",
+      "G_MI_ZRN_Service_Mode_Enabled": "False",
       "G_MI_System_SupplyVoltage": 48000
     },
     "description_pl": "Test całego systemu - wszystkie wejścia w stanie prawidłowym"
@@ -487,15 +487,15 @@
     "description": "Test priorytetu Emergency Stop - powinien deaktywować inne sygnały",
     "block": "P01_01_01_InputsRead_ZRN",
     "inputs": {
-      "IN_ZRN_DIG_02": true,
-      "IN_ZRN_DIG_01": true,
-      "IN_ZRN_DIG_03": true,
-      "IN_ZRN_DIG_04": true,
-      "IN_ZRN_DIG_05": true,
-      "IN_ZRN_DIG_07": true
+      "IN_ZRN_DIG_02": "True",
+      "IN_ZRN_DIG_01": "True",
+      "IN_ZRN_DIG_03": "True",
+      "IN_ZRN_DIG_04": "True",
+      "IN_ZRN_DIG_05": "True",
+      "IN_ZRN_DIG_07": "True"
     },
     "expected_outputs": {
-      "G_MI_BMS_EmergencyLine_State": true
+      "G_MI_BMS_EmergencyLine_State": "True"
     },
     "priority": "emergency_stop",
     "description_pl": "Sygnał Emergency Stop ma najwyższy priorytet"
@@ -505,14 +505,14 @@
     "description": "Test częściowego uszkodzenia systemu - niektóre wejścia niekompletne",
     "block": "P01_01_01_InputsRead_ZRN",
     "inputs": {
-      "IN_ZRN_DIG_01": false,
-      "IN_ZRN_DIG_02": true,
+      "IN_ZRN_DIG_01": "False",
+      "IN_ZRN_DIG_02": "True",
       "DIAG_IN_ZRN_DIG_01_DIAG": 0,
       "DIAG_IN_ZRN_DIG_02_DIAG": 0
     },
     "expected_outputs": {
-      "G_MI_BMS_InterlockLine_State": false,
-      "G_MI_BMS_EmergencyLine_State": true
+      "G_MI_BMS_InterlockLine_State": "False",
+      "G_MI_BMS_EmergencyLine_State": "True"
     },
     "description_pl": "Pętla Interlock nieaktywna, Emergency aktywna"
   },
@@ -522,12 +522,12 @@
     "block": "MUXInputRead",
     "inputs": {
       "w_Diag": 0,
-      "bo_Input": true
+      "bo_Input": "True"
     },
     "expected_outputs": {
-      "bo_VoltageSignal": true
+      "bo_VoltageSignal": "True"
     },
-    "description_pl": "MUX 1: Sygnał napięciowy wysoki (true)"
+    "description_pl": "MUX 1: Sygnał napięciowy wysoki (True)"
   },
   {
     "name": "Test_MUX_Input_Multiplexing_2",
@@ -535,12 +535,12 @@
     "block": "MUXInputRead",
     "inputs": {
       "w_Diag": 0,
-      "bo_Input": true
+      "bo_Input": "True"
     },
     "expected_outputs": {
-      "bo_GroundSignal": false
+      "bo_GroundSignal": "False"
     },
-    "description_pl": "MUX 2: Sygnał uziemienia nieaktywny (false)"
+    "description_pl": "MUX 2: Sygnał uziemienia nieaktywny (False)"
   },
   {
     "name": "Test_Energy_Conservation_R1",
